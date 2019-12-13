@@ -1,0 +1,187 @@
+@font-face { font-family: "base02";          src: url("fonts/base02.ttf");         }
+@font-face { font-family: "Nautilus script"; src: url("fonts/NautilusScript.ttf"); }
+
+* {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(0,0,0,0.85);
+}
+.game {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    max-height: 550px;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    box-shadow: 0 0 30px #000;
+}
+#cnv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    cursor: none;
+}
+#game__start {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)),
+            url("img/start.png") no-repeat center center,
+            url("img/arena.jpg");
+}
+.game__start-none {
+    display: none;
+}
+.game__logo {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.game__logo:before {
+    content: "vTANKE";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    font-family: base02, sans-serif;
+    font-size: 70px;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 0 30px #ffffca;
+}
+.game__logo:after {
+    content: "game";
+    position: absolute;
+    top: 45px;
+    left: 290px;
+    font-family: "Nautilus script", sans-serif;
+    font-size: 45px;
+    line-height: 1;
+    color: #FFD800;
+    transform: rotate(-10deg);
+}
+.game__btn {
+    position: absolute;
+    background-color: rgba(6, 6, 6, 0.69);
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #00b65e;
+    text-shadow: 0 0 25px rgba(0, 235, 149, 0.75);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    box-shadow: 0 0 30px -5px rgba(255, 255, 255, 0.36);
+    transition: .8s;
+    cursor: pointer;
+}
+.game__btn-start {
+    right: 105px;
+    bottom: 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+.game__btn-info {
+    right: 40px;
+    bottom: 115px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+.game__btn:hover {
+    border-color: rgba(0, 235, 149, 0.5);
+    box-shadow: 0 0 30px -5px rgb(0, 0, 0);
+    transition: .5s;
+}
+.game__info {
+    position: absolute;
+    right: 100px;
+    bottom: 175px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    width: 0;
+    height: 0;
+    border-radius: 10px;
+    transition: .5s .6s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.game__info-active {
+    width: 600px;
+    height: 300px;
+    transition: .5s;
+}
+.game__info-left, .game__info-right {
+    flex: 1;
+    font-family: Calibri, sans-serif;
+    color: #eee;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: .5s;
+}
+.game__info-left {
+    transform: translateX(-50px);
+}
+.game__info-right {
+    transform: translateX(50px);
+}
+.game__info-separator {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(0,0,0,0) 60%);
+    width: 1px;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+}
+.game__info-show {
+    opacity: 1;
+    transform: none;
+    transition: .5s .6s;
+}
+
+.game__load {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+}
+.load {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: 1s;
+}
+.unload {
+    opacity: 0;
+}
+
+

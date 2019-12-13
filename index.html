@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Game</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div class="game" id="game">
+            <canvas id="cnv"></canvas>
+            <div id="game__start">
+                <div class="game__logo"></div>
+
+                <div class="game__btn game__btn-start" id="game__btn-start"> START </div>
+                <div class="game__btn game__btn-info" id="game__btn-info"> ? </div>
+
+                <div class="game__info" id="game__info">
+                    <div class="game__info-left" id="game__info-left">
+                        Управление<br><br>
+                        <img src="style/img/game-info_wsda.png">
+                    </div>
+
+                    <div class="game__info-separator" id="game__info-separator"></div>
+
+                    <div class="game__info-right" id="game__info-right">
+                        Огонь<br><br>
+                        <img src="style/img/game-info_mouse.png">
+                    </div>
+                </div>
+            </div>
+            <div id="game__load"></div>
+        </div>
+        <div id="load" class="load"></div>
+
+        <script src="script/script.js"></script>
+    </body>
+</html>
